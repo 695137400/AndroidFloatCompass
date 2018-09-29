@@ -131,15 +131,6 @@ public class MainActivity extends Activity implements SensorEventListener {
                     show.postInvalidate();
                     break;
             }
-        } else {
-            if (null == displayView) {
-                LayoutInflater layoutInflater = LayoutInflater.from(this);
-                displayView = layoutInflater.inflate(R.layout.image_display, null);
-                show = (SpiritView) displayView.findViewById(R.id.show);
-                _compassView = (CompassView) displayView.findViewById(R.id.mycompassView);
-                startService(new Intent(MainActivity.this, MainService.class));
-            }
-            this.finish();
         }
     }
 
@@ -169,4 +160,18 @@ public class MainActivity extends Activity implements SensorEventListener {
         return temp;
     }
 
+    public void openZNZ(View view) {
+        if (null == displayView) {
+            LayoutInflater layoutInflater = LayoutInflater.from(this);
+            displayView = layoutInflater.inflate(R.layout.image_display, null);
+            show = (SpiritView) displayView.findViewById(R.id.show);
+            _compassView = (CompassView) displayView.findViewById(R.id.mycompassView);
+            startService(new Intent(MainActivity.this, MainService.class));
+        }
+        this.finish();
+    }
+
+    public void closeApp(View view) {
+        System.exit(0);
+    }
 }
