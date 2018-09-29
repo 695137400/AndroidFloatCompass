@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="120dp"
+            android:layout_centerInParent="true"
+            android:layout_height="120dp"
+            android:id="@+id/search_edit_frame">
+
+        <chao.ha.com.falgutil.compass.CompassView
+                android:id="@+id/mycompassView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="#80000000"/>
+
+        <ImageView
+                android:layout_width="1dp"
+                android:layout_height="15dp"
+                android:background="@mipmap/shu"
+                android:id="@+id/shuImageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/todo"/>
+
+
+        <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/back"
+                android:id="@+id/imageView"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todo">
+
+            <chao.ha.com.falgutil.SpiritView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/show"
+                    android:layout_gravity="center"/>
+        </FrameLayout>
+    </FrameLayout>
+
+</RelativeLayout>
